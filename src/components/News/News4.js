@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { Newscontext } from '../NewsContext';
-import NewsArticle from './NewsArticle';
+import { Newscontext } from '../../NewsContext';
+import NewsArticle4 from '../NewsArticle/NewsArticle4';
 
 
-function News(props) {
+function News4(props) {
     const { data } = useContext(Newscontext);
     console.log(data);
     
@@ -13,7 +13,7 @@ function News(props) {
         <div className="all__news">
          {data
            ? data.articles.map((news) => (
-           <NewsArticle data={news} key={news.url} />
+           <NewsArticle4 data={news} key={news.url} />
          ))
          : "Loading"}
         </div>
@@ -21,4 +21,4 @@ function News(props) {
     );
 }
 
-export default News;
+export default News4;
