@@ -5,14 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/*
 body {
   font-family: inter;
   width: 80%;
   margin: 0 auto;
   background: rgb(237, 253, 255);
 }
-
+*/
 
 
 
@@ -37,3 +37,21 @@ body {
 .Main {
   max-width: 100%;
 }
+
+header {
+  background-color: chartreuse;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  
+}
+
+ li img {
+    width: 90px;
+    height: 90px;
+    
+ }
+   

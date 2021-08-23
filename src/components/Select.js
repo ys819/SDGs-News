@@ -1,8 +1,15 @@
+/*
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import { Link } from '@material-ui/core';
 import image1 from './itemData/img01.jpg'
 import image2 from './itemData/img02.jpg'
 import image3 from './itemData/img03.jpg'
@@ -20,6 +27,8 @@ import image14 from './itemData/img14.jpg'
 import image15 from './itemData/img15.jpg'
 import image16 from './itemData/img16.jpg'
 import image17 from './itemData/img17.jpg'
+import News from './News';
+import { NewscontextProvider } from '../NewsContext';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,23 +58,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const itemData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
+const News1 = () => {
+    <NewscontextProvider>
+      <News />
+    </NewscontextProvider>
+}
+
 export default function SingleLineImageList() {
   const classes = useStyles();
 
@@ -73,6 +71,7 @@ export default function SingleLineImageList() {
     {
        img: image1,
        title: '貧困を無くそう',
+       link: '/Newsjs' 
     },
     {
         img: image2,
@@ -146,10 +145,12 @@ export default function SingleLineImageList() {
    ];
 
   return (
+    <Link href={itemData.limk}>
     <div className={classes.root}>
       <ImageList className={classes.imageList} cellHeight={300} cols={4}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
+            
             <img src={item.img} alt={item.title} />
             <ImageListItemBar
               title={item.title}
@@ -157,11 +158,12 @@ export default function SingleLineImageList() {
                 root: classes.titleBar,
                 title: classes.title,
               }}
-              
             />
           </ImageListItem>
         ))}
       </ImageList>
+      </Link>
+
       <ImageList className={classes.imageList} cellHeight={300} cols={4}>
         {itemData1.map((item) => (
           <ImageListItem key={item.img} >
@@ -177,7 +179,10 @@ export default function SingleLineImageList() {
             />
           </ImageListItem>
         ))}
+        
       </ImageList>
     </div>
+    
   );
 }
+*/
