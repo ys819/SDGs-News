@@ -1,5 +1,6 @@
 import './App.css';
-import Main from "./components/Main";
+import Nav from "./components/Nav";
+import Main from "./components/Explanation"
 import News1 from "./components/News/News1"
 import News2 from "./components/News/News2"
 import News3 from "./components/News/News3"
@@ -18,8 +19,8 @@ import News15 from "./components/News/News15"
 import News16 from "./components/News/News16"
 import News17 from "./components/News/News17"
 
+
 import { NewscontextProvider } from './NewsContext';
-import "./App.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -164,12 +165,19 @@ const News17P = () => {
     )
 　　　}
 
+const MainP = () => {
+  return(
+    <Main />
+  )
+}
+
 function App() {
   return (
       <div>
       <BrowserRouter>
       
-        <Main />
+        <Nav />
+        <div className='News'>
         <Route path='/News1' component={News1P} />
         <Route path='/News2' component={News2P} />
         <Route path='/News3' component={News3P} />
@@ -187,6 +195,8 @@ function App() {
         <Route path='/News15' component={News15P} />
         <Route path='/News16' component={News16P} />
         <Route path='/News17' component={News17P} />
+        <Route exact path='/' component={MainP} />
+        </div>
       </BrowserRouter>
       </div>
     

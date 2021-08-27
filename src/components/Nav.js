@@ -25,12 +25,14 @@ import icon14 from './itemData/icon14.png'
 import icon15 from './itemData/icon15.png'
 import icon16 from './itemData/icon16.png'
 import icon17 from './itemData/icon17.png'
+import icon18 from './itemData/icon18.png'
+
 
 
 
 function Nav () {
     return(
-        <header>
+        <header className='Nav'>
             <h1>SDGs News</h1>
             <ul className='img'>
                 <li><Link to='/News1'><img src={icon01}/></Link></li>
@@ -50,6 +52,7 @@ function Nav () {
                 <li><Link to='/News15'><img src={icon15}/></Link></li>
                 <li><Link to='/News16'><img src={icon16}/></Link></li>
                 <li><Link to='/News17'><img src={icon17}/></Link></li>
+                <li><Link to='/'><img src={icon18}/></Link></li>
             </ul>
 
 
