@@ -1,6 +1,6 @@
 import './App.css';
-import Nav from "./components/Nav";
-import Main from "./components/Explanation"
+import NavRes from "./components/NavRes";
+import Explanation from "./components/Explanation"
 import News1 from "./components/News/News1"
 import News2 from "./components/News/News2"
 import News3 from "./components/News/News3"
@@ -167,7 +167,7 @@ const News17P = () => {
 
 const MainP = () => {
   return(
-    <Main />
+    <Explanation />
   )
 }
 
@@ -176,7 +176,7 @@ function App() {
       <div>
       <BrowserRouter>
       
-        <Nav />
+        <NavRes />
         <div className='News'>
         <Route path='/News1' component={News1P} />
         <Route path='/News2' component={News2P} />

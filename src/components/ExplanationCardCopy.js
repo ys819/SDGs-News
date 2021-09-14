@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  paper: {
+  paper1: {
     margin: 10,
     padding: theme.spacing(2),
     alignContent: 'flex-start',
@@ -76,6 +76,14 @@ author: {
       [theme.breakpoints.up('lg')]: {
         fontSize: '40px'
   },
+},
+wrapper: {
+  width: '100%',
+},
+paper: {
+  zIndex: 1,
+  position: 'relative',
+  margin: theme.spacing(1),
 },
 }));
 
@@ -190,12 +198,16 @@ const itemData = [
 
 export default function ExplanationCard() {
   const classes = useStyles();  
-  
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
 
   return (
     <div className={classes.root} aligncontent='flex-start' >
         {itemData.map((item) => (
-      <Paper className={classes.paper}>
+      <Paper className={classes.paper1}>
         <Grid container >
           <Grid item>
               <img className={classes.img} alt="complex" src={item.img} />
@@ -206,9 +218,17 @@ export default function ExplanationCard() {
                 <Typography className={classes.title} gutterBottom  variant='h3' >
                   {item.title}
                 </Typography>
-                <Typography className={classes.author} variant="body2" gutterBottom>
-                  {item.author}
-                </Typography>
+                <div className={classes.wrapper}>
+                  <FormControlLabel
+                    control={<Switch   checked={checked} onChange={handleChange} />}
+                    label="Show"
+                    />
+                    <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+                      <Typography className={classes.author} variant="body2" gutterBottom>
+                        {item.author}
+                      </Typography>
+                    </Slide>
+                </div>
               </Grid>
               <Grid item>
               </Grid>

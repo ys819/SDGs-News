@@ -26,6 +26,7 @@ import icon15 from './itemData/icon15.png'
 import icon16 from './itemData/icon16.png'
 import icon17 from './itemData/icon17.png'
 import icon18 from './itemData/icon18.png'
+import imgSdgs from './itemData/imgSdgs.jpg'
 
 
 
@@ -33,7 +34,7 @@ import icon18 from './itemData/icon18.png'
 function Nav () {
     return(
         <header className='Nav'>
-            <h1>SDGs News</h1>
+            <h1><img src={imgSdgs} width="300"/> News</h1>
             <ul className='img'>
                 <li><Link to='/News1'><img src={icon01}/></Link></li>
                 <li><Link to='/News2'><img src={icon02}/></Link></li>
