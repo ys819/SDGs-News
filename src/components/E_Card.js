@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Switch from '@material-ui/core/Switch';
 import Slide from '@material-ui/core/Slide';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import img01 from './itemData/img01.jpg'
 import img02 from './itemData/img02.jpg'
 import img03 from './itemData/img03.jpg'
@@ -115,6 +117,8 @@ export default function E_Card() {
     setState({ ...state, [name]: event.target.checked });
   };
   
+  
+
 
   return (
     <div className={classes.root} aligncontent='flex-start' >
@@ -132,8 +136,9 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel className="formcontrollabel" 
                     control={<Switch   checked={state.checked} onChange={handleChange('checked')} />}
-                    label="Show"
-                    />
+                    label={state.checked ? <VisibilityOffIcon/> : <VisibilityIcon/> }
+                    >
+                      </FormControlLabel>
                     <Slide className="transitione" direction="up" in={state.checked} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
                 世界の貧困率は 2000 年以来、半分以下に低下しました。しかし、新型コロナウイルス感染症により、世界の貧困はこの数十年で初めて増加しています。世界人口の10％にあたる7億人以上が今日でも極度の貧困状態にあり、1 日1 ドル 90 セントという国際貧困ライン未満で家族と暮らしています。貧困とは、単に持続可能な生計を確保するための所得と資源がないことではありません。貧困は飢餓や栄養不良、教育その他基本的サービスの利用制約、社会的差別と排除、さらには意思決定への不参加など、数多くの形となって表れます。経済成長を包摂的なものとし、持続可能な雇用を提供し、平等を促進することが必要です。
@@ -162,7 +167,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked1} onChange={handleChange('checked1')} />}
-                    label="Show"
+                    label={state.checked1 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked1} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -193,7 +198,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked2} onChange={handleChange('checked2')} />}
-                    label="Show"
+                    label={state.checked2 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked2} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -223,7 +228,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked3} onChange={handleChange('checked3')} />}
-                    label="Show"
+                    label={state.checked3 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked3} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -253,7 +258,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked4} onChange={handleChange('checked4')} />}
-                    label="Show"
+                    label={state.checked4 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked4} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -283,7 +288,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked5} onChange={handleChange('checked5')} />}
-                    label="Show"
+                    label={state.checked5 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked5} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -313,7 +318,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked6} onChange={handleChange('checked6')} />}
-                    label="Show"
+                    label={state.checked6 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked6} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -343,7 +348,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked7} onChange={handleChange('checked7')} />}
-                    label="Show"
+                    label={state.checked7 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked7} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -373,7 +378,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked8} onChange={handleChange('checked8')} />}
-                    label="Show"
+                    label={state.checked8 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked8} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -403,7 +408,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked9} onChange={handleChange('checked9')} />}
-                    label="Show"
+                    label={state.checked9 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked9} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -433,7 +438,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked10} onChange={handleChange('checked10')} />}
-                    label="Show"
+                    label={state.checked10 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked10} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -463,7 +468,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked11} onChange={handleChange('checked11')} />}
-                    label="Show"
+                    label={state.checked11 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked11} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -493,7 +498,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked12} onChange={handleChange('checked12')} />}
-                    label="Show"
+                    label={state.checked12 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked12} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -523,7 +528,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked13} onChange={handleChange('checked13')} />}
-                    label="Show"
+                    label={state.checked13 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked13} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -553,7 +558,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked14} onChange={handleChange('checked14')} />}
-                    label="Show"
+                    label={state.checked14 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked14} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -583,7 +588,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked15} onChange={handleChange('checked15')} />}
-                    label="Show"
+                    label={state.checked15 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked15} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>
@@ -613,7 +618,7 @@ export default function E_Card() {
                 <div className={classes.wrapper}>
                   <FormControlLabel
                     control={<Switch   checked={state.checked16} onChange={handleChange('checked16')} />}
-                    label="Show"
+                    label={state.checked16 ? <VisibilityOffIcon/> : <VisibilityIcon/> }
                     />
                     <Slide direction="up" in={state.checked16} mountOnEnter unmountOnExit>
                 <Typography className={classes.author} variant="body2" gutterBottom>

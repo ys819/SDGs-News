@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const Newscontext = createContext();
 
-export const NewscontextProvider = (props) => {
+export const NewscontextProvider15 = (props) => {
     const [data, setData] = useState()
     const apikey = "fed10691873141628d64d303229fb40f";
 
@@ -17,7 +17,7 @@ export const NewscontextProvider = (props) => {
     useEffect(() => {
         axios
         .get(
-            `https://newsapi.org/v2/everything?q=cryptocurrency&from=${today}&sortBy=popularity&apiKey=${apikey}`
+            `https://newsapi.org/v2/everything?q=plants&from=${today}&sortBy=popularity&apiKey=${apikey}`
             )
             .then((response) => setData(response.data))
             .catch((error) => console.log(error));

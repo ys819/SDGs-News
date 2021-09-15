@@ -20,7 +20,24 @@ import News16 from "./components/News/News16"
 import News17 from "./components/News/News17"
 
 
-import { NewscontextProvider } from './NewsContext';
+import { NewscontextProvider } from './components/NewsContext/NewsContext2';
+import { NewscontextProvider1 } from './components/NewsContext/NewsContext1';
+import { NewscontextProvider3 } from './components/NewsContext/NewsContext3';
+import { NewscontextProvider4 } from './components/NewsContext/NewsContext4';
+import { NewscontextProvider5 } from './components/NewsContext/NewsContext5';
+import { NewscontextProvider6 } from './components/NewsContext/NewsContext6';
+import { NewscontextProvider7 } from './components/NewsContext/NewsContext7';
+import { NewscontextProvider8 } from './components/NewsContext/NewsContext8';
+import { NewscontextProvider9 } from './components/NewsContext/NewsContext9';
+import { NewscontextProvider10 } from './components/NewsContext/NewsContext10';
+import { NewscontextProvider11 } from './components/NewsContext/NewsContext11';
+import { NewscontextProvider12 } from './components/NewsContext/NewsContext12';
+import { NewscontextProvider13 } from './components/NewsContext/NewsContext13';
+import { NewscontextProvider14 } from './components/NewsContext/NewsContext14';
+import { NewscontextProvider15 } from './components/NewsContext/NewsContext15';
+import { NewscontextProvider16 } from './components/NewsContext/NewsContext16';
+import { NewscontextProvider17 } from './components/NewsContext/NewsContext17';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,9 +49,9 @@ import {
 
     const News1P = () => {
       return (
-        <NewscontextProvider>
+        <NewscontextProvider1>
         <News1 />
-        </NewscontextProvider>
+        </NewscontextProvider1>
       )
 　　　}
 
@@ -47,121 +64,121 @@ import {
 　　　}
 const News3P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider3>
       <News3 />
-      </NewscontextProvider>
+      </NewscontextProvider3>
     )
 　　　}
 
 const News4P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider4>
       <News4 />
-      </NewscontextProvider>
+      </NewscontextProvider4>
     )
 　　　}
 
 const News5P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider5>
       <News5 />
-      </NewscontextProvider>
+      </NewscontextProvider5>
     )
 　　　}
 
 const News6P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider6>
       <News6 />
-      </NewscontextProvider>
+      </NewscontextProvider6>
     )
 　　　}
 
 const News7P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider7>
       <News7 />
-      </NewscontextProvider>
+      </NewscontextProvider7>
     )
 　　　}
 
 const News8P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider8>
       <News8 />
-      </NewscontextProvider>
+      </NewscontextProvider8>
     )
 　　　}
 
 const News9P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider9>
       <News9 />
-      </NewscontextProvider>
+      </NewscontextProvider9>
     )
 　　　}
 
 const News10P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider10>
       <News10 />
-      </NewscontextProvider>
+      </NewscontextProvider10>
     )
 　　　}
 
 const News11P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider11>
       <News11 />
-      </NewscontextProvider>
+      </NewscontextProvider11>
     )
 　　　}
 
 const News12P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider12>
       <News12 />
-      </NewscontextProvider>
+      </NewscontextProvider12>
     )
 　　　}
 　　　
 const News13P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider13>
       <News13 />
-      </NewscontextProvider>
+      </NewscontextProvider13>
     )
 　　　}
 
 const News14P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider14>
       <News14 />
-      </NewscontextProvider>
+      </NewscontextProvider14>
     )
 　　　}
 
 const News15P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider15>
       <News15 />
-      </NewscontextProvider>
+      </NewscontextProvider15>
     )
 　　　}
 
 const News16P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider16>
       <News16 />
-      </NewscontextProvider>
+      </NewscontextProvider16>
     )
 　　　}
 
 const News17P = () => {
     return (
-      <NewscontextProvider>
+      <NewscontextProvider17>
       <News17 />
-      </NewscontextProvider>
+      </NewscontextProvider17>
     )
 　　　}
 

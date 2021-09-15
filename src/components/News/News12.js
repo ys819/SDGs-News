@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { Newscontext } from '../../NewsContext';
+import { Newscontext } from '../NewsContext/NewsContext12';
 import NewsArticle12 from '../NewsArticle/NewsArticle12';
+import img from '../itemData/E_Elyx_12.png'
 
 
 function News12(props) {
@@ -9,7 +10,7 @@ function News12(props) {
     
     return (
         <div>
-            <h1 className="news__text">SDGs News App</h1>
+            <img src={img} width='100%' />
         <div className="all__news">
          {data
            ? data.articles.map((news) => (

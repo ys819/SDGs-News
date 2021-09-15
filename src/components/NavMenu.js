@@ -211,7 +211,7 @@ export default function NavMenu() {
         <Link to='/News15'>
          <StyledMenuItem>
           <ListItemIcon>
-           <img src={icon16}/>
+           <img src={icon15}/>
           </ListItemIcon>
          </StyledMenuItem>
         </Link>
