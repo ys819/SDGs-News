@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
-import { Newscontext } from '../NewsContext';
-import NewsArticle from './NewsArticle';
+import { Newscontext } from '../NewsContext/NewsContext7';
+import NewsArticle7 from '../NewsArticle/NewsArticle7';
+import img from '../itemData/E_Elyx_07.png'
 
 
-function News(props) {
+function News7(props) {
     const { data } = useContext(Newscontext);
     console.log(data);
     
     return (
         <div>
-            <h1 className="news__text">SDGs News App</h1>
+            <img src={img} width='100%' />
         <div className="all__news">
          {data
            ? data.articles.map((news) => (
-           <NewsArticle data={news} key={news.url} />
+           <NewsArticle7 data={news} key={news.url} />
          ))
          : "Loading"}
         </div>
@@ -21,4 +22,4 @@ function News(props) {
     );
 }
 
-export default News;
+export default News7;
