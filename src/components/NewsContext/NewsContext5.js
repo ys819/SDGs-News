@@ -17,7 +17,7 @@ export const NewscontextProvider5 = (props) => {
     useEffect(() => {
         axios
         .get(
-            `https://newsapi.org/v2/everything?q=gender&from=${today}&sortBy=popularity&apiKey=${apikey}`
+            `https://newsapi.org/v2/everything?q=gender&sortBy=popularity&apiKey=${apikey}`
             )
             .then((response) => setData(response.data))
             .catch((error) => console.log(error));

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Newscontext } from '../NewsContext/NewsContext12';
 import NewsArticle12 from '../NewsArticle/NewsArticle12';
-import img from '../itemData/E_Elyx_12.png'
+import img from '../Img/E_Elyx_12.png'
 
 
 function News12(props) {

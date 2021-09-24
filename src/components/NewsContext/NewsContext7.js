@@ -17,7 +17,7 @@ export const NewscontextProvider7 = (props) => {
     useEffect(() => {
         axios
         .get(
-            `https://newsapi.org/v2/everything?q=energy&from=${today}&sortBy=popularity&apiKey=${apikey}`
+            `https://newsapi.org/v2/everything?q=energy&sortBy=popularity&apiKey=${apikey}`
             )
             .then((response) => setData(response.data))
             .catch((error) => console.log(error));
