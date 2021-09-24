@@ -9,6 +9,9 @@ import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import NavMenu from './NavMenu' 
+import img1 from './Img/sDGs.png'
+import img2 from './Img/logo.jpg'
+
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -41,8 +44,29 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
       marginRight: theme.spacing(2),
     },
-    title: {
-      flexGrow: 1,
+    img1: {
+      height: '100px',
+      width: '200px',
+       [theme.breakpoints.down('xs')]: {
+        height: '50px',
+        width: '90px'
+      },
+      [theme.breakpoints.up('sm')]: {
+        height: '80px',
+        width: '150px'
+      },
+},
+  img2: {
+    height: '100px',
+    width: '100px',
+     [theme.breakpoints.down('xs')]: {
+      height: '50px',
+      width: '50px'
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '80px',
+      width: '80px'
+    },
     },
   }));
 
@@ -60,7 +84,10 @@ export default function HideAppBar(props) {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
           <NavMenu />
           </IconButton>
-            <Typography  variant="h5">Scroll to Hide App Bar</Typography>
+            <Typography  variant="h5">
+              <img className={classes.img1} src={img1} /> 
+              <img className={classes.img2} src={img2} />
+              </Typography>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
